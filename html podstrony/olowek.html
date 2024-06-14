@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <div id="logo2"></div>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div id="wszystko">
+           
+            <div id="image16" class="gallery-image" onclick="openModal(this)"></div>
+            <div id="image17" class="gallery-image" onclick="openModal(this)"></div>
+            <div id="image18" class="gallery-image" onclick="openModal(this)"></div>
+            <div id="image19" class="gallery-image" onclick="openModal(this)"></div>
+        </div>
+    </main>
+    <div id="myModal" class="overlay">
+        <span class="closebtn" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="" alt="">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery-image');
+
+        function openModal(element) {
+            currentIndex = Array.from(images).indexOf(element);
+            const backgroundImage = getComputedStyle(element).backgroundImage;
+            const imageUrl = backgroundImage.slice(5, -2);
+            document.getElementById('modalImg').src = imageUrl;
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            const backgroundImage = getComputedStyle(images[currentIndex]).backgroundImage;
+            const imageUrl = backgroundImage.slice(5, -2);
+            document.getElementById('modalImg').src = imageUrl;
+        }
+    </script>
+</body>
+</html>

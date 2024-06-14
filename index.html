@@ -1,0 +1,149 @@
+<html lang="pl">
+
+
+<head>
+
+     <meta charset="utf-8"/>
+     <meta name="viewport" content="max=device-width, initial scale=1, maxiumim-scale=1" >
+    <title>Szkielet</title>
+    <title>Strona z paskiem na dole</title>
+     <link rel="stylesheet" href="CSS/style.css" type="text/css"/>
+     <title>Formularz z checkboxem i przyciskiem</title>
+</head>
+
+     <body>
+
+         <header>
+
+            <div id="logo">
+
+            </div>
+
+            <div id="menu">
+
+               <ul>
+                  <li>
+                     <a href="#logo">Strona Główna</a>
+                  </li>
+                  <li>
+                     <a href="#sekcja1">O mnie</a>
+                  </li>
+                  <li>
+                     <a href="#mojePrace">Moje prace</a>
+                  </li>
+                  <li>
+                     <a href="#kontakt">Kontakt</a>
+                  </li>
+               </ul>
+
+            </div>
+         
+         </header>  
+
+         <section id="sekcja1">
+
+            <div id="grafika"></div>
+
+            <div id="tekst">
+               Cześć! Mam na imię Aleksandra. Jestem studentką Wyższej Szkoły Technologii Informatycznych w Katowicach na kierunku grafika komputerowa.
+               Lubię tworzyć nowe, kreatywne prace. Uwielbiam eksperymentować i szukać nowych inspiracji, które pozwalają mi rozwijać się jako artystka. 
+               Interesuję się również fotografią oraz animacją. Fotografie to dla mnie sposób na uchwycenie cennych chwil, a animacja daje mi możliwość ożywienia moich pomysłów. Uwielbiam łączyć moje zdolności artystyczne  z nowoczesnymi technologiami, tworząc coś naprawdę wyjątkowego.
+               Kiedy nie zajmuję się swoimi projektami, lubię spędzać czas na szkicowaniu, czytaniu książek lub grą na ukulele.
+            </div>
+
+         </section>
+
+         <fieldset>
+            <legend id="mojePrace">Moje prace</legend>
+         </fieldset>
+
+         <section id="sekcja2">
+
+            <section>
+               <div id="menuPrace">
+      
+                  <ul>
+                     <li>
+                        <a href="html podstrony/wszystkie.html">Wszystkie</a>
+                     </li>
+                     <li>
+                        <a href="html podstrony/malarskie.html">Prace malarskie</a>
+                     </li>
+                     <li>
+                        <a href="html podstrony/olowek.html">Prace ołówkiem</a>
+                     </li>
+                     <li>
+                        <a href="html podstrony/szkice.html">Szkice</a>
+                     </li>
+                     <li>
+                        <a href="html podstrony/fotografie.html">Fotografia</a>
+                     </li>
+                  </ul>
+               </div>
+      
+            </section>
+      
+
+            <div id="menuPrace"></div>
+
+            <div id="prace">
+
+               <div id="grafika1"></div>
+               <div id="grafika2"></div>
+               <div id="grafika3"></div>
+               <div id="grafika4"></div>
+
+            </div>
+
+         </section>
+         <fieldset>
+       
+            <legend id="kontakt">Formularz kontaktowy</legend>
+          
+         </fieldset>
+
+         <div class="form-container">
+            <div class="form-element">
+                <label for="nick">Nick</label>
+                <input type="text" id="nick" name="nick">
+            </div>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-element large-border">
+                <label for="treść">Treść</label>
+                <textarea id="treść" name="treść"></textarea>
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="checkbox-container">
+                <div class="checkbox"></div>
+                <label for="regulamin" class="checkbox-label">Akceptuję regulamin</label>
+                <input type="checkbox" id="regulamin" name="regulamin">
+            </div>
+            <div class="button send-button">
+                Wyślij
+            </div>
+        </div>
+
+
+         <div class="pasekNaDole">
+            <a href="https://www.wsti.pl" target="_blank" id="email2"></a>
+            <a href="https://www.wsti.pl" target="_blank" id="telefon"></a>
+            <a href="https://www.wsti.pl" target="_blank" id="instagram"></a>
+            <a href="https://www.wsti.pl" target="_blank" id="facebook"></a>
+        </div>
+        
+
+         <div class="strzalka" onclick="przewinDoGory()"></div>
+  
+         <script>
+         function przewinDoGory() {
+             window.scrollTo({top: 0, behavior: 'smooth'});
+         }
+         </script>
+
+     </body>
+
+</html>

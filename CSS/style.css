@@ -1,0 +1,804 @@
+body
+{
+    background-color: white;
+}
+
+header{
+    height: 45vh; /* Wysokość nagłówka jako 25% wysokości widoku */
+    width: 90%; 
+    margin: 0 auto;
+
+    display: flex; align-items: flex-start; justify-content: space-between; flex-direction: row;
+
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    header,
+    section#sekcja1,
+    section#sekcja2,
+    .line {
+        width: 90%;
+    }
+
+    div#logo2 {
+        margin-left: 0;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    #wszystko {
+        flex-direction: column;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    div#logo,
+    div#logo2 {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    section#sekcja1 {
+        flex-direction: column;
+    }
+
+    div#tekst {
+        width: 100%;
+        max-width: none;
+    }
+
+    div#prace {
+        flex-direction: column;
+    }
+
+    div#grafika1,
+    div#grafika2,
+    div#grafika3,
+    div#grafika4 {
+        width: 70%;
+        max-width: none;
+        height: auto;
+    }
+
+    .pasekNaDole {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .pasekNaDole img {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    header {
+        height: auto;
+    }
+
+    section#sekcja1 {
+        height: auto;
+    }
+
+    div#tekst {
+        font-size: 1.25rem;
+    }
+
+    .pasekNaDole {
+        font-size: 0.75rem;
+    }
+}
+
+    div#logo{
+
+        height: 250px;
+        width: 440px;
+        
+
+        background-image: URL(../IMG/LOGO.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+
+        margin-top: 40px;
+    
+
+    }
+    div#logo2{
+
+        height: 200px;
+        width: 340px;
+        
+
+        background-image: URL(../IMG/LOGO.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: left;
+
+        margin-top: 70px;
+    }
+
+    div#menu{
+        height: auto;
+        width: 40%;
+        /*border: 1px solid black;*/
+        margin-top: 20px;
+        font-size: 20;
+
+    }
+
+        ul{
+            display: flex; align-items: flex-start; justify-content: space-around; flex-direction: row;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+section#sekcja1{
+
+    height: auto;
+    width: 80%;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 25px;
+    margin: 0 auto;
+
+
+    display: flex; align-items: flex-start; justify-content: space-evenly;
+
+
+}
+
+    div#grafika{
+
+        height: 400px;
+        width: 350px;
+        border: 1px;
+        
+        margin: 20px;
+        background-image: URL(../IMG/Untitled_page-0001.jpg);
+        background-size: cover;
+        
+    }
+
+    div#tekst{
+
+        height: auto;
+        width: 45%;
+        border-left: 2px solid #FFE8EB;
+        margin: 20px;
+
+        color: black;
+        font-size: 24px;
+        text-align: justify;
+
+        padding-left: 20px;
+
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    
+        
+    
+
+    
+    fieldset{
+        
+        border-bottom: 1px solid white ;
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid rgb(243, 196, 196);
+        width: 95%;
+        margin: 20px auto 120px auto;
+        
+        text-align: center;
+        position: relative;
+        top:100;
+    }
+    
+        legend{margin:0 auto;
+                font-size:30 ;
+                }
+
+    section#sekcja2{
+
+        height: auto;
+        width: 100%;
+        display: flex; align-items: center; justify-content: center; flex-direction: column;
+        padding-bottom: 100px;
+    
+    }
+
+        div#menuPrace{
+
+            height: auto;
+            width: 100%;
+            font-size: 24;
+            margin-right: 200px;
+            flex-wrap: wrap;
+            flex-direction: column; 
+        }
+        
+
+        div#prace{
+
+            height: 400px;
+            width: 90%;
+            
+            margin-top: auto;
+            
+            display: flex; align-items: center; justify-content: space-around; flex-direction: row; 
+            flex-wrap: wrap;
+        }
+
+            div#grafika1{height: 300px; width: 200px; border: 1px;
+                background-image: URL(../IMG/malarstwo.jpg);
+                background-size: cover;
+            }
+            div#grafika2{height: 300px; width: 200px; border: 1px;
+                background-image: URL(../IMG/rysunek.jpg);
+                background-size: cover;
+            }
+            div#grafika3{height: 300px; width: 200px; border: 1px solid rgb(194, 191, 191);
+                background-image: URL(../IMG/szkice.jpeg);
+                background-size: cover;
+            }
+            div#grafika4{height: 300px; width: 200px; border: 1px;
+                background-image: URL(../IMG/fotografia.JPG);
+                background-size: cover;
+            }
+            div#wszystko {
+                height: auto; /* Ustawienie wysokości na auto, aby dopasować się do zawartości */
+                width: 90%; /* Ustawienie szerokości na 90% szerokości ekranu */
+                max-width: 1200px; /* Ograniczenie maksymalnej szerokości do 1200px, aby uniknąć zbyt rozciągniętego wyglądu */
+                margin: 50px auto; /* Automatyczne ustawienie marginesów poziomych i 50px marginesu górnego */
+                gap: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            
+        .gallery-image {
+            transition: transform 0.2s;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.5);
+            z-index: 2;
+        }
+        
+        /* Modal dla powiększonych obrazów */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2;
+        }
+        
+        .overlay img {
+            display: block;
+            margin: auto;
+            max-width: 80%;
+            max-height: 80%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+            cursor: pointer;
+            color: white;
+        }
+        /* Specyficzne style dla poszczególnych obrazów */
+        /* Modal dla powiększonych obrazów */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+}
+
+.overlay img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Przyciski nawigacyjne */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 576px) {
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .gallery-container {
+        width: calc(100% - 20px);
+        height: 150px;
+    }
+
+    .gallery-image {
+        width: calc(100% - 20px);
+        height: 150px;
+    }
+
+    .closebtn {
+        font-size: 40px;
+        top: 10px;
+        right: 20px;
+    }
+
+    .prev,
+    .next {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+        
+            /* Fotografia */
+            div#image1 {
+                height: 300px;
+                width: 300px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/fotografia/1.jpg'); /* Ścieżka do pierwszego obrazka */
+                background-size: cover;
+            }
+            
+            div#image4 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/fotografia/01.Plener.JPG'); /* Ścieżka do drugiego obrazka */
+                background-size: cover;
+            }
+            
+            /* Analogicznie definiuję style dla kolejnych obrazów */
+            div#image3 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/fotografia/02.Plener.JPG');
+                background-size: cover;
+            }
+            
+            div#image2 {
+                height: 300px;
+                width: 400px;
+                border: 1px solid black;
+                background-image: url('../IMG/fotografia/2\ 2.JPG');
+                background-size: cover;
+            }
+            
+            div#image5 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/fotografia/2a.jpg');
+                background-size: cover;
+            }
+            
+            div#image6 {
+                height: 300px;
+                width: 480px;
+                border: 1px solid black;
+                background-image: url('../IMG/fotografia/DSC_0176.JPG');
+                background-size: cover;
+            }
+            
+            div#image7 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/fotografia/DSC_0178.JPG'); /* Ścieżka do pierwszego obrazka */
+                background-size: cover;
+            }
+            /* Malarstwo */
+            div#image8 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/malarstwo/1.jpg'); /* Ścieżka do drugiego obrazka */
+                background-size: cover;
+            }
+            
+            div#image9 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/malarstwo/2.jpg');
+                background-size: cover;
+            }
+            
+            div#image10 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/malarstwo/3.jpg');
+                background-size: cover;
+            }
+            
+            div#image11 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/malarstwo/4.jpg');
+                background-size: cover;
+            }
+            
+            div#image12 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/malarstwo/5.jpg');
+                background-size: cover;
+            }
+
+            div#image13 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/malarstwo/6.jpg'); /* Ścieżka do pierwszego obrazka */
+                background-size: cover;
+            }
+            
+            div#image14 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/malarstwo/7.jpg'); /* Ścieżka do drugiego obrazka */
+                background-size: cover;
+            }
+            
+            /* Analogicznie definiuję style dla kolejnych obrazów */
+            div#image15 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/malarstwo/8.jpg');
+                background-size: cover;
+            }
+            /* Rysunek */
+            div#image16 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/rysunek/1.jpg');
+                background-size: cover;
+            }
+            
+            div#image17 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/rysunek/2.jpg');
+                background-size: cover;
+            }
+            
+            div#image18 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/rysunek/3.jpg');
+                background-size: cover;
+            }
+            div#image19 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/rysunek/4.jpg'); /* Ścieżka do pierwszego obrazka */
+                background-size: cover;
+            }
+            /* Szkice */
+            div#image20 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black; /* Przykładowa czarna ramka o grubości 1 piksela */
+                background-image: url('../IMG/szkice/1.jpeg'); /* Ścieżka do drugiego obrazka */
+                background-size: cover;
+            }
+            
+            div#image21 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/szkice/2.jpeg');
+                background-size: cover;
+            }
+            
+            div#image22 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/szkice/3.jpeg');
+                background-size: cover;
+            }
+            
+            div#image23 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/szkice/4.jpeg');
+                background-size: cover;
+            }
+            
+            div#image24 {
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+                background-image: url('../IMG/szkice/5.jpeg');
+                background-size: cover;
+            }
+
+            
+            .form-title { 
+                margin-top: auto; /* Dostosuj wartość odstępu według potrzeb */
+                text-align: center;
+                
+            }
+            
+            .line {
+                
+                border-bottom: 1px solid white ;
+                border-left: 0;
+                border-right: 0;
+                border-top: 1px solid rgb(245, 200, 200);
+                width: 100%;
+                
+                margin: 20px auto 20px auto;
+                color: hsl(0, 0%, 100%);
+
+                
+                /* Kolor linii i inne style */
+            }
+
+            form-element {
+                margin-bottom: 50px; /* Dostosuj odstęp między elementami */
+                
+            }
+                    
+                        /* Stylowanie etykiet formularza */
+            .form-element label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px; /* Dostosuj odstęp poniżej etykiety */
+                margin-left: 20%;
+                text-align: left; /* Wyrównanie tekstu etykiety do lewej */
+            }
+
+            /* Stylowanie elementów wejściowych formularza */
+            .form-element input[type="text"],
+            .form-element input[type="email"],
+            .form-element textarea {
+                width: 60%;
+                margin: 0 auto 30px auto; /* Wyśrodkowanie i odstęp na dole */
+                padding: 10px;
+                border: 1px solid #ccc; /* Styl ramki */
+                font-size: 20px; /* Dodanie jednostki px */
+                box-sizing: border-box;
+                display: block; /* Ustawienie blokowego elementu */
+            }
+
+            /* Stylowanie pola tekstowego (textarea) */
+            .form-element textarea {
+                height: 150px; /* Dostosuj wysokość pola tekstowego */
+                resize: vertical;
+            }
+
+            /* Kontener checkbox */
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+            }
+
+            
+            .checkbox-label {
+                margin-left: 20%; /* Dostosuj odstęp między etykietą a checkboxem */
+
+            }
+            
+            .send-button {
+                display: inline-block;
+                
+                border: 1px solid #000; /* Styl ramki */
+                cursor: pointer;
+                text-align: center; /* Centrowanie tekstu w przycisku */
+
+            }
+            
+            .send-button {
+                margin-left: 74%;
+                transition: background-color 0.3s; /* Efekt płynnego przejścia */
+                width: auto ;
+                padding: 10px 1%;
+            }
+
+            .send-button:hover {
+                background-color: #f5c5c5; /* Kolor podświetlenia po najechaniu */
+            }
+            
+            @media (max-width: 780px) {
+                .form-container {
+                    padding: 2%;
+                }
+                
+            
+                .send-button {
+                    max-width: 30%; /* Na mniejszych ekranach przycisk zajmuje całą szerokość */
+                }
+            }
+            
+            body {
+                position: relative;
+                min-height: 100vh;
+            }
+            
+            .pasekNaDole {
+                position: absolute;
+                bottom: -100;
+                width: 100%;
+                height: 70px; /* Wysokość paska */
+                background-color: #e9bbbb; /* Kolor paska */
+                color: white; /* Kolor tekstu na pasku */
+                text-align: center; /* Wyśrodkowanie tekstu */
+                line-height: 50px; /* Wyrównanie tekstu do środka paska */
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .pasekNaDole a {
+                margin: 0 4%; /* Dodaj margines poziomy między obrazkami */
+            }
+            
+            .pasekNaDole a div {
+                height: 50px;
+                width: 50px;
+                background-size: contain; /* Obrazy są responsywne */
+                background-repeat: no-repeat;
+            }
+
+            #email2{
+                height: 50px; width: 50px;
+                background-image: URL(../IMG/mail.jpg);
+                background-size: cover;
+                margin: 4%;
+            }
+
+
+            #telefon{
+                height: 50px; width: 50px;
+                background-image: URL(../IMG/telefon.jpg);
+                background-size: cover;
+                margin: 4%;
+            }
+
+
+            #instagram{
+                height: 50px; width: 50px;
+                background-image: URL(../IMG/instagram.jpg);
+                background-size: cover;
+                margin: 4%;
+            }
+
+            #facebook{
+                height: 50px; width: 50px;
+                background-image: URL(../IMG/facebook.jpg);
+                background-size: cover;
+                margin: 4%;
+            }
+
+    
+            .strzalka {
+                position: fixed;
+                right: 7%; /* Odległość od prawej strony */
+                top: 80%; /* Położenie w pionie */
+                width: 50px; /* Szerokość strzałki */
+                height: 50px; /* Wysokość strzałki */
+                background-image: url(../IMG/zyro-image-kopia\ 2.png);/* Ścieżka do obrazka strzałki */
+                background-size: cover; /* Dopasowanie obrazka do rozmiaru elementu */
+                cursor: pointer; /* Zmienia kursor na wskaźnik po najechaniu na strzałkę */
+            } 
+            @media (max-width: 768px) {
+                .pasekNaDole {
+                    flex-direction: row; /* Ustawienie elementów w kolumnie dla mniejszych ekranów */
+                    height: auto; /* Automatyczna wysokość */
+                    padding: 1%; /* Większy padding */
+                }
+            
+                .pasekNaDole div {
+                    margin: 2% 0; /* Większe marginesy między ikonami */
+                }
+            
+                .strzalka {
+                    right: 5%; /* Zmniejszenie odległości od prawej strony */
+                    bottom: 10%; /* Zmniejszenie odległości od dołu */
+                    width: 40px; /* Zmniejszenie szerokości */
+                    height: 40px; /* Zmniejszenie wysokości */
+                }
+            }
